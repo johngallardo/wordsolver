@@ -31,7 +31,7 @@
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="47,44,47,311" Height="252">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                     <TextBlock>WordSolver Version:</TextBlock>
-                    <TextBlock Margin="5,0,0,0">1.4</TextBlock>                    
+                    <TextBlock Margin="5,0,0,0">1.5</TextBlock>                    
                 </StackPanel>
                 <Button x:Name="ContactButton" Click="ContactClick" Content="Contact" Width="180" />                
                 <TextBlock TextWrapping="Wrap" Margin="0,20,0,0">                    
