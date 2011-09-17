@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordSolver", "WordSolver\WordSolver.csproj", "{BB62D41E-B0F8-4F48-BAA2-5AC018ED7E56}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug Trial|Any CPU = Debug Trial|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB62D41E-B0F8-4F48-BAA2-5AC018ED7E56}.Debug Trial|Any CPU.ActiveCfg = Debug Trial|Any CPU
+		{BB62D41E-B0F8-4F48-BAA2-5AC018ED7E56}.Debug Trial|Any CPU.Build.0 = Debug Trial|Any CPU
+		{BB62D41E-B0F8-4F48-BAA2-5AC018ED7E56}.Debug Trial|Any CPU.Deploy.0 = Debug Trial|Any CPU
+		{BB62D41E-B0F8-4F48-BAA2-5AC018ED7E56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB62D41E-B0F8-4F48-BAA2-5AC018ED7E56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB62D41E-B0F8-4F48-BAA2-5AC018ED7E56}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{BB62D41E-B0F8-4F48-BAA2-5AC018ED7E56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB62D41E-B0F8-4F48-BAA2-5AC018ED7E56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB62D41E-B0F8-4F48-BAA2-5AC018ED7E56}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,9 @@
+﻿WordSolver is a fun way to play games such as Scrabble and Words With Friends while being able to focus on strategy such as board position. 
+After entering your tiles and a small amount of information about what letters to build from, WordSolver will tell you all of the words which you can build. 
+It allows you to use wildcards, and even perform some more advanced placements bridging multiple letters on a game board.
+
+Don't Cheat! Let your friends know that you are using WordSolver so that they can use it too! 
+
+Keywords:word, words, scrabble, tiles, letters 
+Feature Description: Find More Words!
+Category:Entertainment

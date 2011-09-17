@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="WordSolver.TileDisplay"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="96" d:DesignWidth="96">
+
+    <Grid x:Name="LayoutRoot" d:DesignWidth="174" d:DesignHeight="139" Height="76" Width="73">
+        <Rectangle Stroke="#FF646A41" HorizontalAlignment="Left" Height="75" VerticalAlignment="Top" Width="70" RadiusX="10" RadiusY="10">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFE1E29F"/>
+                    <GradientStop Color="#FF9D9D61" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock x:Name="Character" Margin="8,1,0,0"  Text="F" 
+                   FontFamily="Trebuchet MS" FontSize="64" HorizontalAlignment="Left" 
+                   VerticalAlignment="Top" FontWeight="Bold" Foreground="#FF2D0808" TextAlignment="Center" />
+        <TextBlock x:Name="Score" HorizontalAlignment="Right" Height="27" 
+                   Text="G" VerticalAlignment="Bottom" Width="22" 
+                   Foreground="Black" Margin="0,0,8,41" TextAlignment="Right" />
+    </Grid>
+</UserControl>

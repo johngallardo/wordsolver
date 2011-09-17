@@ -1,0 +1,6 @@
+﻿<TileInfoCollection xmlns="clr-namespace:WordSolver">
+    <TileInfo Letter="A" Score="1" />
+    <TileInfo Letter="B" Score="1" />
+    <TileInfo Letter="W" Score="4" />
+    <TileInfo Letter="I" Score="4" />
+</TileInfoCollection>
