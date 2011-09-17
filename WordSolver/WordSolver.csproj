@@ -13,7 +13,7 @@
     <AssemblyName>WordSolver</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
-    <TargetFrameworkProfile>WindowsPhone</TargetFrameworkProfile>
+    <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
     <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
     <SilverlightApplication>true</SilverlightApplication>
     <SupportedCultures>
@@ -96,9 +96,6 @@
     <Compile Include="DebugBinder.cs" />
     <Compile Include="EndsWithTemplateFactory.cs" />
     <Compile Include="RelativeAnimatingContentControl.cs" />
-    <Compile Include="Settings.xaml.cs">
-      <DependentUpon>Settings.xaml</DependentUpon>
-    </Compile>
     <Compile Include="SettingsModel.cs" />
     <Compile Include="TemplateFactoryBase.cs" />
     <Compile Include="MainPage.xaml.cs">
@@ -123,6 +120,7 @@
     <Compile Include="TemplateTypeConverter.cs" />
     <Compile Include="TileCriteria.cs" />
     <Compile Include="TileCriteriaResult.cs" />
+    <None Include="Art\LargeMobileAppArtwork.pdn" />
     <None Include="TileDisplay.xaml.cs">
       <DependentUpon>TileDisplay.xaml</DependentUpon>
     </None>
@@ -138,6 +136,7 @@
     <Compile Include="WordList.xaml.cs">
       <DependentUpon>WordList.xaml</DependentUpon>
     </Compile>
+    <None Include="WordSolver_9_17_2011_11_53_52_AM.sap" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -156,10 +155,10 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Resource Include="SampleData\SampleDataSource\SampleTileInfos.xaml">
+    <DesignTimeOnly Include="SampleData\SampleDataSource\SampleTileInfos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Resource>
+    </DesignTimeOnly>
     <Page Include="TrialInfo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -168,17 +167,13 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SampleData\SampleDataSource\SampleDataSource.xaml">
+    <DesignTimeOnly Include="SampleData\SampleDataSource\SampleDataSource.xaml">
       <Generator>MSBuild:MarkupCompilePass1</Generator>
       <SubType>Designer</SubType>
-    </Page>
-    <Resource Include="SampleData\WordDisplaySample\WordDisplaySample.xaml">
+    </DesignTimeOnly>
+    <DesignTimeOnly Include="SampleData\WordDisplaySample\WordDisplaySample.xaml">
       <SubType>Designer</SubType>
-    </Resource>
-    <Page Include="Settings.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
+    </DesignTimeOnly>
     <None Include="TileDisplay.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -189,6 +184,21 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Art\BackgroundArt.png" />
+    <None Include="Art\BackgroundArt.svg" />
+    <None Include="Art\Description_HomePage.png" />
+    <None Include="Art\Description_HomePage2.png" />
+    <None Include="Art\Description_Settings.png" />
+    <None Include="Art\Description_Solutions.png" />
+    <None Include="Art\Description_Solutions2.png" />
+    <None Include="Art\LargeMobileAppArtwork.png" />
+    <None Include="Art\LargePCAppArtwork.png" />
+    <None Include="Art\LargePCAppArtwork2.png" />
+    <None Include="Art\SmallAppIcon.png" />
+    <None Include="Art\SmallAppIcon.svg" />
+    <None Include="Art\SmallMobileMarketplace.png" />
+    <None Include="Art\SplashScreen.png" />
+    <None Include="Art\SplashScreen.svg" />
     <Content Include="Dictionaries.zip" />
     <None Include="Properties\AppManifest.xml" />
     <None Include="Properties\WMAppManifest.xml" />
