@@ -5,7 +5,19 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordSolver", "WordSolver\Wo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordSolverCommon", "WordSolverCommon\WordSolverCommon.csproj", "{7C5E2779-C2AC-44EC-BE98-227A3698479F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordSolverCommonTests", "WordSolverCommonTests\WordSolverCommonTests.csproj", "{E3F14FC6-F48E-4DBA-A782-1487AF80F6E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EF87B57F-F6CE-414A-A6B2-688DF2A571EB}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+		WordSolver.vsmdi = WordSolver.vsmdi
+	EndProjectSection
+EndProject
 Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = WordSolver.vsmdi
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug Trial|Any CPU = Debug Trial|Any CPU
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +39,12 @@ Global
 		{7C5E2779-C2AC-44EC-BE98-227A3698479F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C5E2779-C2AC-44EC-BE98-227A3698479F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C5E2779-C2AC-44EC-BE98-227A3698479F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3F14FC6-F48E-4DBA-A782-1487AF80F6E8}.Debug Trial|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3F14FC6-F48E-4DBA-A782-1487AF80F6E8}.Debug Trial|Any CPU.Build.0 = Debug|Any CPU
+		{E3F14FC6-F48E-4DBA-A782-1487AF80F6E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3F14FC6-F48E-4DBA-A782-1487AF80F6E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3F14FC6-F48E-4DBA-A782-1487AF80F6E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3F14FC6-F48E-4DBA-A782-1487AF80F6E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
