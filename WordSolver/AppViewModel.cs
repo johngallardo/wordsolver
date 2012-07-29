@@ -10,6 +10,7 @@ using System.Diagnostics;
 using Microsoft.Phone.Marketplace;
 
 using Interlocked = System.Threading.Interlocked;
+using System.Windows;
 
 namespace WordSolver
 {
@@ -116,10 +117,8 @@ namespace WordSolver
                 Solutions.Clear();
             }
             var cs = new Constraints(ActiveConstraints.Tiles, ActiveConstraints.GetAdjustedTemplate());
-            App.Current.RootVisual.Dispatcher.BeginInvoke(OnSearchBeginning);
-
-            var dispatcher = App.Current.RootVisual.Dispatcher;
-
+            var dispatcher = Deployment.Current.Dispatcher;
+            dispatcher.BeginInvoke(OnSearchBeginning);
             BackgroundWorker worker = new BackgroundWorker();
             worker.WorkerReportsProgress = false;
             worker.DoWork += new DoWorkEventHandler((obj, eargs) =>
