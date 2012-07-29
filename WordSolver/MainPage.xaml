@@ -4,6 +4,7 @@
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:ws ="clr-namespace:WordSolver"
+    xmlns:wsc="clr-namespace:WordSolver;assembly=WordSolverCommon"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"    
     xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit" 
@@ -23,11 +24,6 @@
             <toolkit:NavigationInTransition.Backward>
                 <toolkit:SlideTransition Mode="SlideRightFadeIn" />
             </toolkit:NavigationInTransition.Backward>
-            <!--
-            <toolkit:NavigationInTransition.Forward>
-                <toolkit:SlideTransition Mode="SlideLeftFadeIn" />                
-            </toolkit:NavigationInTransition.Forward>
-            -->
         </toolkit:NavigationInTransition>
     </toolkit:TransitionService.NavigationInTransition>
     <toolkit:TransitionService.NavigationOutTransition>
@@ -54,30 +50,28 @@
         <ws:DictionaryDisplayCollection x:Name="DictionaryDisplayResource" />
     </FrameworkElement.Resources>
 
-    <Grid x:Name="LayoutRoot" Background="Transparent" Height="693">        
-        
+    <Grid x:Name="LayoutRoot" Background="Transparent" Height="693">
         <controls:Pivot Title="WORDSOLVER">
             <controls:PivotItem Header="don't cheat!">
                 <Grid DataContext="{Binding ActiveConstraints}" d:LayoutOverrides="VerticalAlignment">
                     <Grid.Resources>
                         <ws:TemplateTypeConverter x:Key="ConvertFromTemplateType" />
                         <ws:DebugBinder x:Key="DebugConverter" />
-                        <ws:TemplateFactoryCollection x:Key="TemplateFactoryCollectionDS" />
+                        <wsc:TemplateFactoryCollection x:Key="TemplateFactoryCollectionDS" />
                     </Grid.Resources>
                     <StackPanel x:Name="LayoutPanel" Margin="0,0,0,8">
                         <TextBlock FontSize="{StaticResource PhoneFontSizeMedium}" TextWrapping="Wrap" Text="Enter the letters that you have to work with. For a wildcard, you can use a period." VerticalAlignment="Top" TextAlignment="Left" Margin="14,0"/>
                         <TextBox FontSize="{StaticResource PhoneFontSizeExtraLarge}" x:Name="tileTextBox" Text="{Binding Tiles, Mode=TwoWay}" />
                         <TextBlock FontSize="{StaticResource PhoneFontSizeMedium}" TextWrapping="Wrap" TextAlignment="Left" Margin="14,0"><Run Text="Enter the letters that you want to build from. Your word will start with, contain, or end with these letters. You can also use a period as a wildcard."/></TextBlock>
                         <toolkit:ListPicker 
-							ItemsSource="{Binding AvailableConstraints}"
-							SelectedItem="{Binding TemplateFactory,Mode=TwoWay}"							
-							DisplayMemberPath="Description">
+                            ItemsSource="{Binding AvailableConstraints}"
+                            SelectedItem="{Binding TemplateFactory,Mode=TwoWay}"
+                            DisplayMemberPath="Description">
                         </toolkit:ListPicker>
                         <TextBox FontSize="{StaticResource PhoneFontSizeExtraLarge}" x:Name="templateTextBox" Text="{Binding Template, Mode=TwoWay}" CacheMode="BitmapCache" />
                     </StackPanel>
                 </Grid>
             </controls:PivotItem>
-            
             <controls:PivotItem Header="dictionary">
                 <StackPanel>
                     <TextBlock 
@@ -93,7 +87,6 @@
                 </StackPanel>
             </controls:PivotItem>
         </controls:Pivot>
-
         <Button x:Name="FocusStealer" Height="0" Width="0" IsTabStop="True"/>
-	</Grid>
+    </Grid>
 </phone:PhoneApplicationPage>

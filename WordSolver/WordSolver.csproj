@@ -89,15 +89,10 @@
       <DependentUpon>SampleTileInfos.xaml</DependentUpon>
     </Compile>
     <Compile Include="SimplifiedWordDisplay.cs" />
-    <Compile Include="ConstraintState.cs" />
     <Compile Include="AppViewModel.cs" />
-    <Compile Include="Constraints.cs" />
-    <Compile Include="ContainsTemplateFactory.cs" />
     <Compile Include="DebugBinder.cs" />
-    <Compile Include="EndsWithTemplateFactory.cs" />
     <Compile Include="RelativeAnimatingContentControl.cs" />
     <Compile Include="SettingsModel.cs" />
-    <Compile Include="TemplateFactoryBase.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -113,22 +108,16 @@
     <Compile Include="SampleData\WordDisplaySample\WordDisplaySample.xaml.cs">
       <DependentUpon>WordDisplaySample.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Scorer.cs" />
     <Compile Include="Solver.cs" />
-    <Compile Include="StartsWithTemplateFactory.cs" />
-    <Compile Include="TemplateCriteria.cs" />
-    <Compile Include="TemplateTypeConverter.cs" />
-    <Compile Include="TileCriteria.cs" />
-    <Compile Include="TileCriteriaResult.cs" />
     <None Include="Art\LargeMobileAppArtwork.pdn" />
     <None Include="TileDisplay.xaml.cs">
       <DependentUpon>TileDisplay.xaml</DependentUpon>
     </None>
+    <Compile Include="TemplateTypeConverter.cs" />
     <Compile Include="TrialInfo.xaml.cs">
       <DependentUpon>TrialInfo.xaml</DependentUpon>
     </Compile>
     <Compile Include="VisibilityConverters.cs" />
-    <Compile Include="Word.cs" />
     <None Include="WordDisplay.xaml.cs">
       <DependentUpon>WordDisplay.xaml</DependentUpon>
     </None>
@@ -201,7 +190,9 @@
     <None Include="Art\SplashScreen.svg" />
     <Content Include="Dictionaries.zip" />
     <None Include="Properties\AppManifest.xml" />
-    <None Include="Properties\WMAppManifest.xml" />
+    <None Include="Properties\WMAppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
     <DesignTimeOnly Include="SampleData\SampleDataSource\SampleDataSource.xsd" />
     <DesignTimeOnly Include="SampleData\WordDisplaySample\WordDisplaySample.xsd" />
     <Content Include="LargeMobileAppArtwork.png" />
@@ -218,6 +209,12 @@
     <Content Include="Icons\appbar.feature.settings.rest.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WordSolverCommon\WordSolverCommon.csproj">
+      <Project>{7C5E2779-C2AC-44EC-BE98-227A3698479F}</Project>
+      <Name>WordSolverCommon</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />

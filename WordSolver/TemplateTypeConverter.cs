@@ -3,6 +3,7 @@ using System.Linq;
 using System.Windows.Data;
 using System.Windows.Controls;
 using System.Collections.Generic;
+
 namespace WordSolver
 {
     public class TemplateTypeConverter : IValueConverter
