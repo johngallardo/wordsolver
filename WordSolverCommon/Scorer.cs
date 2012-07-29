@@ -1,15 +1,5 @@
 ﻿using System;
 using System.Linq;
-using System.Net;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Documents;
-using System.Windows.Ink;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Animation;
-using System.Windows.Shapes;
-using System.Collections.Generic;
 using System.Globalization;
 
 namespace WordSolver
@@ -23,7 +13,7 @@ namespace WordSolver
         {
             _scoreMap = new int['Z'+1];
             _scoreStrings = new string['Z' + 1];
-            var scoring = Resources.Scoring;
+            var scoring = WordSolverCommon.ResourcesCommon.Scoring;
             var scores = from p in scoring.Split(';')
                          select p.Split(',');
             foreach(var entry in scores)

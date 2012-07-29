@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Runtime.Serialization;
 using System.IO;
-using System.IO.IsolatedStorage;
 using System.Collections.Generic;
 using System.ComponentModel;
 

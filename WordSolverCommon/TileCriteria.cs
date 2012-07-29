@@ -24,7 +24,7 @@ namespace WordSolver
 
         public string GetTemplateTiles(string templateTiles)
         {
-            var validTiles = templateTiles.Where(c => (c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
+            var validTiles = templateTiles.ToCharArray().Where(c => (c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
             StringBuilder sb = new StringBuilder();
             sb.Append(validTiles.ToArray());
             return sb.ToString();
