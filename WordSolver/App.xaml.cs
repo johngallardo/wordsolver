@@ -59,21 +59,22 @@ namespace WordSolver
         // This code will not execute when the application is first launched
         private void Application_Activated(object sender, ActivatedEventArgs e)
         {
-            Model = new AppViewModel();
-
-            if (PhoneApplicationService.Current.State.ContainsKey("SolutionsState"))
-            {
-                try
+            if (Model == null)
+            {   
+                Model = new AppViewModel();
+                if (PhoneApplicationService.Current.State.ContainsKey("SolutionsState"))
                 {
-                    var solutions = PhoneApplicationService.Current.State["SolutionsState"] as Word[];
-                    foreach (Word w in solutions)
-                        Model.Solutions.Add(w);
+                    try
+                    {
+                        var solutions = PhoneApplicationService.Current.State["SolutionsState"] as Word[];
+                        foreach (Word w in solutions)
+                            Model.Solutions.Add(w);
+                    }
+                    catch (Exception)
+                    {
+                    }
                 }
-                catch (Exception)
-                {
-                }                
             }
-            
         }
 
         // Code to execute when the application is deactivated (sent to background)
