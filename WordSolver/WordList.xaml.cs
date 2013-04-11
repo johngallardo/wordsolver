@@ -17,21 +17,50 @@ namespace WordSolver
     {
         public WordList()
         {
-            _model = (App.Current as App).Model;
-
-            _model.SearchCompleted += new EventHandler(_model_SearchCompleted);
-
-            DataContext = _model;
             InitializeComponent();
+            this.Unloaded += WordList_Unloaded;
         }
 
         void _model_SearchCompleted(object sender, EventArgs e)
         {
             this.ProgressBar.Visibility = System.Windows.Visibility.Collapsed;
-            _model.SearchCompleted -= new EventHandler(_model_SearchCompleted);
+            UnwireEvents();
+        }
+
+        private void UnwireEvents()
+        {
+            if (_model != null)
+            {
+                _model.SearchCompleted -= new EventHandler(_model_SearchCompleted);
+                _eventWired = false;
+            }
+        }
+
+        protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
+        {
+            if (_model == null)
+            {
+                DataContext = _model = (App.Current as App).Model;
+                _model.SearchBeginning += new EventHandler(_model_SearchCompleted);
+                _eventWired = true;
+            }
+        }
+
+        protected override void OnNavigatedFrom(System.Windows.Navigation.NavigationEventArgs e)
+        {   
+            if (_eventWired)
+            {
+                UnwireEvents();
+            }
+        }
+
+        void WordList_Unloaded(object sender, RoutedEventArgs e)
+        {
+            DataContext = _model = null;
         }
 
         private AppViewModel _model;
+        private bool _eventWired;
 
         private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
         {
