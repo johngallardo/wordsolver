@@ -125,7 +125,6 @@
     <Compile Include="WordList.xaml.cs">
       <DependentUpon>WordList.xaml</DependentUpon>
     </Compile>
-    <None Include="WordSolver_9_17_2011_11_53_52_AM.sap" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">

@@ -25,3 +25,9 @@ obj/
 [Rr]elease*/
 _ReSharper*/
 [Tt]est[Rr]esult*
+WordSolver/PerfLogs/*
+WordSolver/PerformanceLogs/*
+WordSolver/SubmissionInfo/*
+_UpgradeReport_Files/*
+WordSolver.vsmdi
+testimpactdata.sdf

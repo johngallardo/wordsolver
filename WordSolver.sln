@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordSolver", "WordSolver\WordSolver.csproj", "{BB62D41E-B0F8-4F48-BAA2-5AC018ED7E56}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordSolverCommon", "WordSolverCommon\WordSolverCommon.csproj", "{7C5E2779-C2AC-44EC-BE98-227A3698479F}"
